@@ -8,6 +8,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Piscies.EntreContos.Application;
+using Piscies.EntreContos.Application.Interface;
+using Piscies.EntreContos.Infrastructure;
+using Piscies.EntreContos.Infrastructure.Interface;
 
 namespace Piscies.EntreContos.Facade
 {
@@ -24,6 +28,12 @@ namespace Piscies.EntreContos.Facade
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //Application
+            services.AddScoped<IWriterApp, WriterApp>();
+
+            //Infrastructure
+            services.AddScoped<IWriterInfrastructure, WriterInfrastructure>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
