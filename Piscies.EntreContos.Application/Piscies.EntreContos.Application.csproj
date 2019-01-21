@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Piscies.EntreContos.Application.Interface\Piscies.EntreContos.Application.Interface.csproj" />
+    <ProjectReference Include="..\Piscies.EntreContos.Crosscut\Piscies.EntreContos.Crosscut.csproj" />
     <ProjectReference Include="..\Piscies.EntreContos.Infrastructure.Interface\Piscies.EntreContos.Infrastructure.Interface.csproj" />
   </ItemGroup>
 
