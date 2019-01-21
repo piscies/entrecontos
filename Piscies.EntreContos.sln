@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Infrast
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Infrastructure.Interface", "Piscies.EntreContos.Infrastructure.Interface\Piscies.EntreContos.Infrastructure.Interface.csproj", "{7F4AC22C-0A21-4303-9954-25552B21A551}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Application", "Piscies.EntreContos.Application\Piscies.EntreContos.Application.csproj", "{55C98CB1-2716-4867-97DA-3815FE15453D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Application.Interface", "Piscies.EntreContos.Application.Interface\Piscies.EntreContos.Application.Interface.csproj", "{82936929-1C1B-4C75-BED4-28CACB196163}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{7F4AC22C-0A21-4303-9954-25552B21A551}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F4AC22C-0A21-4303-9954-25552B21A551}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F4AC22C-0A21-4303-9954-25552B21A551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C98CB1-2716-4867-97DA-3815FE15453D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C98CB1-2716-4867-97DA-3815FE15453D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C98CB1-2716-4867-97DA-3815FE15453D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C98CB1-2716-4867-97DA-3815FE15453D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82936929-1C1B-4C75-BED4-28CACB196163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82936929-1C1B-4C75-BED4-28CACB196163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82936929-1C1B-4C75-BED4-28CACB196163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82936929-1C1B-4C75-BED4-28CACB196163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
