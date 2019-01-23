@@ -12,6 +12,8 @@ namespace Piscies.EntreContos.Domain
 
         public string Theme { get; set; }
         public List<Classification> Classification { get; set; }
+        public DateTime AnnouncementDate { get; set; }
+        public DateTime ResultsDate { get; set; }
 
         #endregion
 
@@ -32,6 +34,9 @@ namespace Piscies.EntreContos.Domain
 
             if (string.IsNullOrWhiteSpace(Theme))
                 actionResponse.AddError("'Tema' é campo obrigatório de um desafio.");
+
+            if (AnnouncementDate == null || AnnouncementDate == DateTime.MinValue)
+                actionResponse.AddError("'Data de Anúncio' é campo obrigatório de um desafio.");
 
             return actionResponse.Value;
         }
