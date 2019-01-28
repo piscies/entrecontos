@@ -11,8 +11,8 @@ namespace Piscies.EntreContos.Domain
     {
         #region Properties
 
-        public int Position { get; set; }
-        public Writer Writer { get; set; }
+        public int Position { get; set; }        
+        public ShortStory ShortStory { get; set; }
 
         #endregion
 
@@ -34,10 +34,10 @@ namespace Piscies.EntreContos.Domain
             if (Position <= 0)
                 actionResponse.AddError("'Posição' é campo obrigatório de uma classificação.");
 
-            if (Writer == null)
-                actionResponse.AddError("Toda classificação tem que ter um Escritor atrelado a ela.");
+            if (ShortStory == null)
+                actionResponse.AddError("Toda classificação tem que ter um Conto atrelado a ela.");
             else
-                actionResponse.IncorporateActionResponse(Writer.Validate());
+                actionResponse.IncorporateActionResponse(ShortStory.Validate());
 
             return actionResponse.Value;
         }
