@@ -5,17 +5,29 @@ VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Piscies.EntreContos.Domain", "Piscies.EntreContos.Domain\Piscies.EntreContos.Domain.csproj", "{1DAE64EB-572E-4FA0-AD77-447BFDF3D82E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Facade", "Piscies.EntreContos.Facade\Piscies.EntreContos.Facade.csproj", "{97649975-9CEF-4A65-AAC0-49FEA1AF646A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Piscies.EntreContos.Facade", "Piscies.EntreContos.Facade\Piscies.EntreContos.Facade.csproj", "{97649975-9CEF-4A65-AAC0-49FEA1AF646A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Infrastructure", "Piscies.EntreContos.Infrastructure\Piscies.EntreContos.Infrastructure.csproj", "{E36E0DCF-BD60-4CBA-96D8-227022A68C68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Piscies.EntreContos.Infrastructure", "Piscies.EntreContos.Infrastructure\Piscies.EntreContos.Infrastructure.csproj", "{E36E0DCF-BD60-4CBA-96D8-227022A68C68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Infrastructure.Interface", "Piscies.EntreContos.Infrastructure.Interface\Piscies.EntreContos.Infrastructure.Interface.csproj", "{7F4AC22C-0A21-4303-9954-25552B21A551}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Piscies.EntreContos.Infrastructure.Interface", "Piscies.EntreContos.Infrastructure.Interface\Piscies.EntreContos.Infrastructure.Interface.csproj", "{7F4AC22C-0A21-4303-9954-25552B21A551}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Application", "Piscies.EntreContos.Application\Piscies.EntreContos.Application.csproj", "{55C98CB1-2716-4867-97DA-3815FE15453D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Piscies.EntreContos.Application", "Piscies.EntreContos.Application\Piscies.EntreContos.Application.csproj", "{55C98CB1-2716-4867-97DA-3815FE15453D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Application.Interface", "Piscies.EntreContos.Application.Interface\Piscies.EntreContos.Application.Interface.csproj", "{82936929-1C1B-4C75-BED4-28CACB196163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Piscies.EntreContos.Application.Interface", "Piscies.EntreContos.Application.Interface\Piscies.EntreContos.Application.Interface.csproj", "{82936929-1C1B-4C75-BED4-28CACB196163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piscies.EntreContos.Crosscut", "Piscies.EntreContos.Crosscut\Piscies.EntreContos.Crosscut.csproj", "{DDCC7901-530A-46C9-9EE5-833800532866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Piscies.EntreContos.Crosscut", "Piscies.EntreContos.Crosscut\Piscies.EntreContos.Crosscut.csproj", "{DDCC7901-530A-46C9-9EE5-833800532866}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{5DBF9623-3C9E-4D47-8A20-E08595DBD97C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{17614C10-980A-445A-8487-23626AB20615}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{4335D066-16C2-402B-AF70-7CA8042AEBE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0FBB1472-59AC-4F6F-852A-C6A6A029621C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crosscut", "Crosscut", "{1A567AF7-5BD1-4301-946D-FADDEAC87EA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{DC096DBA-8C8B-4465-A448-5D95A86C8B1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +66,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1DAE64EB-572E-4FA0-AD77-447BFDF3D82E} = {17614C10-980A-445A-8487-23626AB20615}
+		{97649975-9CEF-4A65-AAC0-49FEA1AF646A} = {4335D066-16C2-402B-AF70-7CA8042AEBE0}
+		{E36E0DCF-BD60-4CBA-96D8-227022A68C68} = {0FBB1472-59AC-4F6F-852A-C6A6A029621C}
+		{7F4AC22C-0A21-4303-9954-25552B21A551} = {0FBB1472-59AC-4F6F-852A-C6A6A029621C}
+		{55C98CB1-2716-4867-97DA-3815FE15453D} = {5DBF9623-3C9E-4D47-8A20-E08595DBD97C}
+		{82936929-1C1B-4C75-BED4-28CACB196163} = {5DBF9623-3C9E-4D47-8A20-E08595DBD97C}
+		{DDCC7901-530A-46C9-9EE5-833800532866} = {1A567AF7-5BD1-4301-946D-FADDEAC87EA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA3D39DD-1D11-4267-8126-F2468E4E8501}
