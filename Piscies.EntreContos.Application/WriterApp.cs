@@ -1,6 +1,8 @@
 ﻿using Piscies.Common.Crosscut.DTO;
 using Piscies.Common.Crosscut.Helpers;
 using Piscies.EntreContos.Application.Interface;
+using Piscies.EntreContos.Application.Translators;
+using Piscies.EntreContos.Crosscut.DTO;
 using Piscies.EntreContos.Domain;
 using Piscies.EntreContos.Infrastructure.Interface;
 using System;
@@ -24,8 +26,11 @@ namespace Piscies.EntreContos.Application
             //Gets the list in the database
             IList<Writer> writerList = writerInfrastructure.List();
 
+            //Translates
+            IList<WriterDTO> writerListDTO = WriterTranslator.SetDTO(writerList);
+
             //Prepares the return
-            actionResponseWrapper.SetContent(writerList);
+            actionResponseWrapper.SetContent(writerListDTO);
 
             return actionResponseWrapper.Value;
         }

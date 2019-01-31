@@ -12,7 +12,7 @@ namespace Piscies.EntreContos.Domain
         #region Properties
 
         public string Title { get; set; }
-        public Writer Author { get; set; }
+        public Writer Writer { get; set; }
         public Challenge Challenge { get; set; }
         public string URL { get; set; }
 
@@ -36,10 +36,10 @@ namespace Piscies.EntreContos.Domain
             if (string.IsNullOrEmpty(Title))
                 actionResponse.AddError("'Título' é campo obrigatório para um Conto.");
 
-            if (Author == null)
+            if (Writer == null)
                 actionResponse.AddError("'Autor' é campo obrigatório para um Conto.");
             else
-                actionResponse.IncorporateActionResponse(Author.Validate());
+                actionResponse.IncorporateActionResponse(Writer.Validate());
 
             if (Challenge == null)
                 actionResponse.AddError("'Desafio' é campo obrigatório para um Conto.");

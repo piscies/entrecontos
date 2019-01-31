@@ -22,5 +22,8 @@ namespace Piscies.EntreContos.Infrastructure
         }
 
         public DbSet<Writer> Writer { get; set; }
+        public DbSet<Challenge> Challenge { get; set; }
+        public DbSet<Classification> Classification { get; set; }
+        public DbSet<ShortStory> ShortStory { get; set; }
     }
 }

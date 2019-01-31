@@ -31,12 +31,14 @@ namespace Piscies.EntreContos.Facade
 
             //Application
             services.AddScoped<IWriterApp, WriterApp>();
+            services.AddScoped<IChallengeApp, ChallengeApp>();
 
             //Infrastructure
             services.AddScoped<IWriterInfrastructure, WriterInfrastructure>();
+            services.AddScoped<IChallengeInfrastructure, ChallengeInfrastructure>();
 
             //Configurations
-            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddSingleton(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

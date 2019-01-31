@@ -10,6 +10,9 @@ namespace Piscies.EntreContos.Application.Translators
     {
         public static WriterDTO SetDTO(Writer writer)
         {
+            if (writer == null)
+                return null;
+
             WriterDTO writerDTO = new WriterDTO();
             writerDTO.Id = writer.Id;
             writerDTO.Name = writer.Name;
@@ -19,6 +22,9 @@ namespace Piscies.EntreContos.Application.Translators
 
         public static IList<WriterDTO> SetDTO(IList<Writer> writers)
         {
+            if (writers == null)
+                return null;
+
             IList<WriterDTO> writerDTOs = new List<WriterDTO>();
 
             foreach (Writer writer in writers)

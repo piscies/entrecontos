@@ -3,42 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Piscies.Common.Crosscut.DTO;
+using Piscies.EntreContos.Application.Interface;
 
 namespace Piscies.EntreContos.Facade.Controllers
 {
     [Route("api/[controller]")]
     public class ChallengesController : Controller
     {
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        IChallengeApp challengeApp;
+
+        public ChallengesController(IChallengeApp challengeApp)
         {
-            return new string[] { "value1", "value2" };
+            this.challengeApp = challengeApp;
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
-        }
+            ActionResponseDTO response = new ActionResponseDTO();
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
+            try
+            {
+                response = await challengeApp.GetById(id);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return Ok(response.Content);
         }
     }
 }
