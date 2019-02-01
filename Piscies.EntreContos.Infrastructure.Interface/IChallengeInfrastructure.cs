@@ -9,5 +9,6 @@ namespace Piscies.EntreContos.Infrastructure.Interface
     public interface IChallengeInfrastructure
     {
         Task<Challenge> GetById(int id);
+        Task<IList<Challenge>> GetList();
     }
 }

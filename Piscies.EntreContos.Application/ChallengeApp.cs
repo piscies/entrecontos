@@ -36,5 +36,21 @@ namespace Piscies.EntreContos.Application
 
             return actionResponseWrapper.Value;
         }
+
+        public async Task<ActionResponseDTO> GetList()
+        {
+            ActionResponseWrapper actionResponseWrapper = new ActionResponseWrapper(typeof(ChallengeApp).FullName);
+
+            //Gets the challenges in the database
+            IList<Challenge> foundChallenges = await challengeInfrastructure.GetList();
+
+            //Translates
+            IList<ChallengeDTO> challengesDTO = ChallengeTranslator.SetDTO(foundChallenges);
+
+            //Prepares the return
+            actionResponseWrapper.SetContent(challengesDTO);
+
+            return actionResponseWrapper.Value;
+        }
     }
 }

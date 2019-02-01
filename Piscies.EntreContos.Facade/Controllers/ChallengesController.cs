@@ -34,5 +34,22 @@ namespace Piscies.EntreContos.Facade.Controllers
 
             return Ok(response.Content);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetList()
+        {
+            ActionResponseDTO response = new ActionResponseDTO();
+
+            try
+            {
+                response = await challengeApp.GetList();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+
+            return Ok(response.Content);
+        }
     }
 }

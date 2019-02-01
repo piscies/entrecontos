@@ -8,14 +8,7 @@ function REST_Get(apiPath, jsonDataInterpretationCallback) {
     request.open('GET', APIServiceBaseAddress + apiPath, true);
 
     //Reads JSON Data
-    request.onload = function () {
-        var data = JSON.parse(this.response);
-
-        data.forEach(movie => {
-            // Log each movie's title
-            console.log(movie.title);
-        });
-    }    
+    request.onload = jsonDataInterpretationCallback;
 
     // Send request
     request.send();

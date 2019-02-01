@@ -49,6 +49,10 @@ namespace Piscies.EntreContos.Facade
                 app.UseDeveloperExceptionPage();
             }
 
+            // Shows UseCors with CorsPolicyBuilder.
+            app.UseCors(builder =>
+               builder.WithOrigins("http://localhost:64033"));
+
             app.UseMvc();
         }
     }

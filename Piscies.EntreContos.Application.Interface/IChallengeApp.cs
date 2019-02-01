@@ -9,5 +9,6 @@ namespace Piscies.EntreContos.Application.Interface
     public interface IChallengeApp
     {
         Task<ActionResponseDTO> GetById(int id);
+        Task<ActionResponseDTO> GetList();
     }
 }
