@@ -29,6 +29,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crosscut", "Crosscut", "{1A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{DC096DBA-8C8B-4465-A448-5D95A86C8B1D}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Piscies.EntreContos.Frontend", "Piscies.EntreContos.Frontend\", "{43F82F0C-01F8-4F4C-AA99-D62C98703E33}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64033"
+		Debug.AspNetCompiler.PhysicalPath = "Piscies.EntreContos.Frontend\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64033\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64033"
+		Release.AspNetCompiler.PhysicalPath = "Piscies.EntreContos.Frontend\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64033\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64033"
+		SlnRelativePath = "Piscies.EntreContos.Frontend\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +85,10 @@ Global
 		{DDCC7901-530A-46C9-9EE5-833800532866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDCC7901-530A-46C9-9EE5-833800532866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDCC7901-530A-46C9-9EE5-833800532866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F82F0C-01F8-4F4C-AA99-D62C98703E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F82F0C-01F8-4F4C-AA99-D62C98703E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F82F0C-01F8-4F4C-AA99-D62C98703E33}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F82F0C-01F8-4F4C-AA99-D62C98703E33}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +101,7 @@ Global
 		{55C98CB1-2716-4867-97DA-3815FE15453D} = {5DBF9623-3C9E-4D47-8A20-E08595DBD97C}
 		{82936929-1C1B-4C75-BED4-28CACB196163} = {5DBF9623-3C9E-4D47-8A20-E08595DBD97C}
 		{DDCC7901-530A-46C9-9EE5-833800532866} = {1A567AF7-5BD1-4301-946D-FADDEAC87EA2}
+		{43F82F0C-01F8-4F4C-AA99-D62C98703E33} = {DC096DBA-8C8B-4465-A448-5D95A86C8B1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA3D39DD-1D11-4267-8126-F2468E4E8501}
