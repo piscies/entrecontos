@@ -14,6 +14,9 @@ function ReadChallengesFromApiAsync() {
 
         var newLine = document.createElement("a");
         newLine.className = "collection-item";
+        newLine.style = "cursor: pointer;";
+        newLine.href = "ChallengeResults.html";
+        newLine.onclick = function () { LoadChallengeInLocalStorage(challenge.id) };
 
         var lineText = document.createTextNode(challenge.theme);
         newLine.appendChild(lineText);
@@ -21,10 +24,10 @@ function ReadChallengesFromApiAsync() {
     });
 }
 
-function LoadChallengeInLocalStorage(callingElement) {
+function LoadChallengeInLocalStorage(challengeId) {
 
     //Gets the Id in the clicked element's value
-    var challenge = FindChallengeById(callingElement.value);
+    var challenge = FindChallengeById(challengeId);
 
     //Loads in local storage
     window.localStorage.setItem(STORAGE_CHALLENGE_ID, challenge.id);
@@ -40,8 +43,8 @@ function FindChallengeById(Id) {
     //Iterate over each element in the array
     for (var i = 0; i < challengesList.length; i++) {
         // look for the entry with a matching 'ID' value
-        if (obj[i].id == Id) {
-            return obj[i];
+        if (challengesList[i].id == Id) {
+            return challengesList[i];
         }
     }
 
