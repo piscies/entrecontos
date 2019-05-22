@@ -15,11 +15,25 @@ function ReadChallengeResultsFromApiAsync() {
 
     data.classification.forEach(result => {
 
-        var newLine = document.createElement("a");
-        newLine.className = "collection-item";
+        //Creates the new line in the collection (as avatar)
+        var newLine = document.createElement("li");
+        newLine.className = "collection-item avatar";
 
-        var lineText = document.createTextNode(result.shortStory.title);
-        newLine.appendChild(lineText);
+        //Creates the avatar and adds to collection
+        var newAvatar = document.createElement("i");
+        newAvatar.className = "material-icons circle";
+        newAvatar.textContent = "folder";
+        
+        newLine.appendChild(newAvatar);
+
+        //Creates the short story title and adds to the collection
+        var shortStoryNameSpan = document.createElement("span");
+        shortStoryNameSpan.className = "title";
+        shortStoryNameSpan.textContent = result.shortStory.title;
+        
+        newLine.appendChild(shortStoryNameSpan);
+
+        //Adds the new line to the list
         document.getElementById("resultsList").appendChild(newLine);
     });
 }
