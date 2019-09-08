@@ -13,7 +13,6 @@ namespace Piscies.EntreContos.Domain
 
         public string Title { get; set; }
         public Writer Writer { get; set; }
-        public Challenge Challenge { get; set; }
         public string URL { get; set; }
 
         #endregion
@@ -23,6 +22,13 @@ namespace Piscies.EntreContos.Domain
         public ShortStory()
         {
             EntityName = "ShortStory";
+        }
+        public ShortStory(int id, string Title, Writer writer, string URL)
+        {
+            EntityName = "ShortStory";
+            this.Id = id;
+            this.Writer = writer;
+            this.URL = URL;
         }
 
         #endregion
@@ -40,11 +46,6 @@ namespace Piscies.EntreContos.Domain
                 actionResponse.AddError("'Autor' é campo obrigatório para um Conto.");
             else
                 actionResponse.IncorporateActionResponse(Writer.Validate());
-
-            if (Challenge == null)
-                actionResponse.AddError("'Desafio' é campo obrigatório para um Conto.");
-            else
-                actionResponse.IncorporateActionResponse(Challenge.Validate());
 
             return actionResponse.Value;
         }

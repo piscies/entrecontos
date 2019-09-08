@@ -11,7 +11,6 @@ namespace Piscies.EntreContos.Domain
         #region Properties
 
         public string Theme { get; set; }
-        public List<Classification> Classification { get; set; }
         public DateTime AnnouncementDate { get; set; }
         public DateTime ResultsDate { get; set; }
 
@@ -22,6 +21,14 @@ namespace Piscies.EntreContos.Domain
         public Challenge()
         {
             EntityName = "Challenge";
+        }
+
+        public Challenge(int id, string theme, DateTime announcementDate)
+        {
+            EntityName = "Challenge";
+            this.Id = id;
+            this.Theme = theme;
+            this.AnnouncementDate = announcementDate;
         }
 
         #endregion
