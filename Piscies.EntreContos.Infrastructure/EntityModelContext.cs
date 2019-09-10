@@ -18,7 +18,7 @@ namespace Piscies.EntreContos.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL(Configuration.GetConnectionString("mySqlAWS"));
+            optionsBuilder.UseMySQL(Configuration.GetConnectionString("ECConnString"));
         }
 
         public DbSet<Writer> Writer { get; set; }
