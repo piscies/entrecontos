@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Desafios literários</h2>
+
+@foreach (var challenge in Model.Challenges)
+{
+    <p>@challenge.Theme</p>
+}
+
