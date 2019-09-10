@@ -11,8 +11,9 @@ namespace Piscies.EntreContos.Domain
     {
         #region Properties
 
-        public int Position { get; set; }        
+        public int Position { get; set; } //Position "zero" means unclassified yet
         public ShortStory ShortStory { get; set; }
+        public Challenge Challenge { get; set; }
 
         #endregion
 
@@ -21,6 +22,14 @@ namespace Piscies.EntreContos.Domain
         public Classification()
         {
             EntityName = "Classification";
+        }
+        public Classification(int id, int position, ShortStory shortStory, Challenge challenge)
+        {
+            EntityName = "Classification";
+            this.Id = id;
+            this.Position = position;
+            this.ShortStory = shortStory;
+            this.Challenge = challenge;
         }
 
         #endregion

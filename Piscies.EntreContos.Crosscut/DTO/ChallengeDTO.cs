@@ -10,6 +10,5 @@ namespace Piscies.EntreContos.Crosscut.DTO
         public string Theme { get; set; }
         public DateTime AnnouncementDate { get; set; }
         public DateTime ResultsDate { get; set; }
-        public List<ClassificationDTO> Classification { get; set; }
     }
 }

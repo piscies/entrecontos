@@ -21,6 +21,12 @@ namespace Piscies.EntreContos.Domain
         {
             EntityName = "Writer";
         }
+        public Writer(int id, string name)
+        {
+            EntityName = "Writer";
+            this.Id = id;
+            this.Name = name;
+        }
 
         #endregion
 

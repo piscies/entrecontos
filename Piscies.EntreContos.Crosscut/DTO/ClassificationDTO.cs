@@ -9,5 +9,6 @@ namespace Piscies.EntreContos.Crosscut.DTO
         public int Id { get; set; }
         public int Position { get; set; }
         public ShortStoryDTO ShortStory { get; set; }
+        public ChallengeDTO Challenge { get; set; }
     }
 }

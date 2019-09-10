@@ -20,16 +20,16 @@ namespace Piscies.EntreContos.Infrastructure
 
         public async Task<Challenge> GetById(int id)
         {
-            Challenge foundChallenge;
+            Challenge foundChallenge = null;
 
-            using (EntityModelContext context = new EntityModelContext(Configuration))
+            /*using (EntityModelContext context = new EntityModelContext(Configuration))
             {
                 foundChallenge = await context.Challenge
                     .Include(ch => ch.Classification)
                         .ThenInclude(cl => cl.ShortStory)
                             .ThenInclude(ss => ss.Writer)
                     .FirstOrDefaultAsync(x => x.Id == id);
-            }
+            }*/
 
             return foundChallenge;
         }

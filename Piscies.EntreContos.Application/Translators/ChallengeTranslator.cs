@@ -20,9 +20,6 @@ namespace Piscies.EntreContos.Application.Translators
             challengeDTO.AnnouncementDate = challenge.AnnouncementDate;
             challengeDTO.ResultsDate = challenge.ResultsDate;
 
-            if(challenge.Classification != null)
-                challengeDTO.Classification = ClassificationTranslator.SetDTO(challenge.Classification).ToList();
-
             return challengeDTO;
         }
 
