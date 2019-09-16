@@ -5,8 +5,23 @@
 
 <h2>Desafios literários</h2>
 
-@foreach (var challenge in Model.Challenges)
-{
-    <p>@challenge.Theme</p>
-}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Tema</th>
+            <th scope="col">Data de Anúncio</th>
+            <th scope="col">Data do Resultado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var challenge in Model.Challenges)
+        {
+            <tr>
+                <th scope="row">@challenge.Theme</th>
+                <td>@challenge.AnnouncementDate.ToString("dd/MM/yyyy")</td>
+                <td>@challenge.ResultsDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
 
