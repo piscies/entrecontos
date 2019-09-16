@@ -17,9 +17,13 @@
         @foreach (var challenge in Model.Challenges)
         {
             <tr>
-                <th scope="row">@challenge.Theme</th>
+                <th scope="row">
+                    <a href="@Url.Action("Index", "Classification", new { controller = "Classification" }, Request.Url.Scheme)">
+                        <span>@challenge.Theme</span>
+                    </a>
+                </th>
                 <td>@challenge.AnnouncementDate.ToString("dd/MM/yyyy")</td>
-                <td>@challenge.ResultsDate</td>
+                <td>@challenge.ResultsDate.ToString("dd/MM/yyyy")</td>
             </tr>
         }
     </tbody>
